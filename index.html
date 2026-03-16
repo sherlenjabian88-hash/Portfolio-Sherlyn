@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sherlen Abegail Jabian | Developer & UI/UX Designer</title>
+  
+  <!-- External Libraries -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Background Elements -->
+  <div class="bg-pattern"></div>
+  <div class="bg-hearts" id="bgHearts"></div>
+  
+  <!-- Floating Hearts Animation -->
+  <div class="floating-hearts" id="floatingHearts"></div>
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--bg)]/90 backdrop-blur-lg border-b border-[var(--border)]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        <a href="#" class="font-display text-2xl lg:text-3xl font-semibold tracking-tight text-[var(--fg)] flex items-center gap-1">
+          <span class="text-[var(--accent)]">♥</span>
+          Sherlyn
+        </a>
+        
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#about" class="nav-link text-sm tracking-wide font-medium">About</a>
+          <a href="#education" class="nav-link text-sm tracking-wide font-medium">Education</a>
+          <a href="#skills" class="nav-link text-sm tracking-wide font-medium">Skills</a>
+          <a href="#projects" class="nav-link text-sm tracking-wide font-medium">Projects</a>
+          <a href="#certificates" class="nav-link text-sm tracking-wide font-medium">Certificates</a>
+          <a href="#contact" class="nav-link text-sm tracking-wide font-medium">Contact</a>
+        </div>
+
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl hover:bg-[var(--bg-alt)] transition-colors" aria-label="Toggle menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[var(--card)] border-t border-[var(--border)]">
+      <div class="px-6 py-6 space-y-4">
+        <a href="#about" class="block py-2 text-[var(--fg-muted)] hover:text-[var(--accent)] font-medium">About</a>
+        <a href="#education" class="block py-2 text-[var(--fg-muted)] hover:text-[var(--accent)] font-medium">Education</a>
+        <a href="#skills" class="block py-2 text-[var(--fg-muted)] hover:text-[var(--accent)] font-medium">Skills</a>
+        <a href="#projects" class="block py-2 text-[var(--fg-muted)] hover:text-[var(--accent)] font-medium">Projects</a>
+        <a href="#certificates" class="block py-2 text-[var(--fg-muted)] hover:text-[var(--accent)] font-medium">Certificates</a>
+        <a href="#contact" class="block py-2 text-[var(--fg-muted)] hover:text-[var(--accent)] font-medium">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center pt-20">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-24 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        
+        <!-- Left Content -->
+        <div class="order-2 lg:order-1">
+          <div class="reveal flex items-center gap-2 mb-4">
+            <span class="text-[var(--accent)]">♥</span>
+            <p class="text-[var(--accent)] font-semibold tracking-widest text-sm uppercase">
+              Developer & UI/UX Designer
+            </p>
+          </div>
+          
+          <h1 class="reveal reveal-delay-1 font-display text-5xl lg:text-7xl xl:text-8xl font-normal leading-[0.95] mb-6">
+            Sherlyn<br>
+            <span class="font-bold text-[var(--accent)]">Jabian</span>
+          </h1>
+          
+          <p class="reveal reveal-delay-2 text-lg lg:text-xl text-[var(--fg-muted)] max-w-lg mb-10 leading-relaxed">
+            Passionate about creating beautiful digital experiences with love and attention to detail. Every pixel matters, every interaction counts.
+          </p>
+
+          <div class="reveal reveal-delay-3 flex flex-wrap gap-4 mb-12">
+            <a href="#contact" class="btn-primary">
+              <span>♥</span>
+              Get in Touch
+            </a>
+            <a href="#projects" class="btn-outline">View Projects</a>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="reveal reveal-delay-4 grid grid-cols-3 gap-6 lg:gap-10">
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] mb-3">
+                <span class="text-white text-2xl font-bold">3+</span>
+              </div>
+              <p class="text-sm text-[var(--fg-muted)] font-medium">Years Experience</p>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] mb-3">
+                <span class="text-white text-2xl font-bold">25+</span>
+              </div>
+              <p class="text-sm text-[var(--fg-muted)] font-medium">Projects Completed</p>
+            </div>
+            <div class="text-center">
+              <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] mb-3">
+                <span class="text-white text-2xl font-bold">10+</span>
+              </div>
+              <p class="text-sm text-[var(--fg-muted)] font-medium">Happy Clients</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Content - Profile Image -->
+        <div class="order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div class="reveal profile-container w-72 h-[26rem] lg:w-80 lg:h-[30rem] float-element">
+            <div class="profile-frame"></div>
+            <div class="profile-img-wrapper">
+              <img 
+                src="https://z-cdn-media.chatglm.cn/files/09b855d1-6a85-40fc-aaae-f1746a478650.png?auth_key=1873546484-f0e9fc8a53b844aa89fd9aee3f29f83a-0-6eec4d54d158e441d61738d15b9bbae7" 
+                alt="Sherlyn Jabian - Developer and UI/UX Designer" 
+                class="profile-img"
+              >
+            </div>
+            
+            <!-- Floating Hearts around profile -->
+            <div class="heart-decoration" style="top: -10px; right: -10px; animation-delay: 0s;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent-dark)" stroke-width="1">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <div class="heart-decoration" style="bottom: 50px; left: -20px; animation-delay: 0.5s;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--accent-light)" stroke="var(--accent)" stroke-width="1">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <div class="heart-decoration" style="top: 30%; right: -25px; animation-delay: 1s;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--accent-dark)" stroke="var(--accent-dark)" stroke-width="1">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator hidden lg:flex">
+      <span>Scroll</span>
+      <svg class="scroll-heart" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="relative py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <div class="reveal flex items-center gap-2 mb-4">
+            <span class="text-[var(--accent)]">♥</span>
+            <p class="text-[var(--accent)] font-semibold tracking-widest text-sm uppercase">About Me</p>
+          </div>
+          <h2 class="reveal reveal-delay-1 font-display text-4xl lg:text-5xl font-normal mb-8">
+            Personal<br><span class="font-bold text-[var(--accent)]">Information</span>
+          </h2>
+          <div class="reveal reveal-delay-2 space-y-6 text-[var(--fg-muted)]">
+            <p class="text-lg leading-relaxed">
+              I'm a passionate developer and UI/UX designer dedicated to creating meaningful digital experiences with love and creativity. Every project is an opportunity to make someone's life a little brighter.
+            </p>
+            <p class="leading-relaxed">
+              My approach combines user-centered design principles with modern development practices, ensuring every project delivers both visual appeal and seamless functionality that users will adore.
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-3">
+          <div class="card">
+            <div class="space-y-6">
+              <div class="flex items-center gap-4 pb-6 border-b border-[var(--border)]">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-[var(--fg-muted)]">Full Name</p>
+                  <p class="font-semibold text-[var(--fg)]">Sherlyn Jabian</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4 pb-6 border-b border-[var(--border)]">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-[var(--fg-muted)]">Role</p>
+                  <p class="font-semibold text-[var(--fg)]">Developer / UI/UX Designer</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4 pb-6 border-b border-[var(--border)]">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-[var(--fg-muted)]">Location</p>
+                  <p class="font-semibold text-[var(--fg)]">Philippines</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4">
+                <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-sm text-[var(--fg-muted)]">Email</p>
+                  <p class="font-semibold text-[var(--fg)]">sherlyn.jabian@email.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="relative py-24 lg:py-32 bg-[var(--bg-alt)]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="reveal flex items-center justify-center gap-2 mb-4">
+          <span class="text-[var(--accent)]">♥</span>
+          <p class="text-[var(--accent)] font-semibold tracking-widest text-sm uppercase">Background</p>
+        </div>
+        <h2 class="reveal reveal-delay-1 font-display text-4xl lg:text-5xl font-normal">
+          Educational <span class="font-bold text-[var(--accent)]">Attainment</span>
+        </h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-8">
+        <!-- College -->
+        <div class="reveal timeline-item pl-8 pb-8">
+          <div class="card">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="inline-block px-4 py-1.5 bg-gradient-to-r from-[var(--accent)] to-[var(--accent-dark)] text-white text-xs font-semibold rounded-full mb-3">College</span>
+                <h3 class="font-display text-2xl font-semibold text-[var(--fg)]">Bachelor of Science in Information Technology</h3>
+              </div>
+              <span class="text-sm text-[var(--fg-muted)] font-medium">2019 - 2023</span>
+            </div>
+            <p class="text-[var(--fg-muted)]">University of Technology - Focused on Web Development, UI/UX Design, and Software Engineering</p>
+          </div>
+        </div>
+
+        <!-- Senior High -->
+        <div class="reveal reveal-delay-1 timeline-item pl-8 pb-8">
+          <div class="card">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="inline-block px-4 py-1.5 bg-[var(--deep)] text-white text-xs font-semibold rounded-full mb-3">Senior High School</span>
+                <h3 class="font-display text-2xl font-semibold text-[var(--fg)]">ICT - Technical Vocational Track</h3>
+              </div>
+              <span class="text-sm text-[var(--fg-muted)] font-medium">2017 - 2019</span>
+            </div>
+            <p class="text-[var(--fg-muted)]">National High School - Specialized in Computer Programming and Digital Design</p>
+          </div>
+        </div>
+
+        <!-- Junior High -->
+        <div class="reveal reveal-delay-2 timeline-item pl-8 pb-8">
+          <div class="card">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="inline-block px-4 py-1.5 bg-[var(--fg-muted)] text-white text-xs font-semibold rounded-full mb-3">Junior High School</span>
+                <h3 class="font-display text-2xl font-semibold text-[var(--fg)]">Secondary Education</h3>
+              </div>
+              <span class="text-sm text-[var(--fg-muted)] font-medium">2013 - 2017</span>
+            </div>
+            <p class="text-[var(--fg-muted)]">National High School - Developed foundational skills in Mathematics and Technology</p>
+          </div>
+        </div>
+
+        <!-- Elementary -->
+        <div class="reveal reveal-delay-3 timeline-item pl-8">
+          <div class="card">
+            <div class="flex flex-wrap items-start justify-between gap-4 mb-3">
+              <div>
+                <span class="inline-block px-4 py-1.5 bg-[var(--accent-dark)] text-white text-xs font-semibold rounded-full mb-3">Elementary</span>
+                <h3 class="font-display text-2xl font-semibold text-[var(--fg)]">Primary Education</h3>
+              </div>
+              <span class="text-sm text-[var(--fg-muted)] font-medium">2007 - 2013</span>
+            </div>
+            <p class="text-[var(--fg-muted)]">Elementary School - Graduated with Honors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="relative py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="reveal flex items-center justify-center gap-2 mb-4">
+          <span class="text-[var(--accent)]">♥</span>
+          <p class="text-[var(--accent)] font-semibold tracking-widest text-sm uppercase">Expertise</p>
+        </div>
+        <h2 class="reveal reveal-delay-1 font-display text-4xl lg:text-5xl font-normal">
+          Skills & <span class="font-bold text-[var(--accent)]">Competencies</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <!-- Technical Skills -->
+        <div class="reveal">
+          <h3 class="font-display text-2xl font-semibold mb-8 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </span>
+            Technical Skills
+          </h3>
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">HTML / CSS / JavaScript</span>
+                <span class="text-[var(--accent)] font-semibold">95%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="95"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">Python</span>
+                <span class="text-[var(--accent)] font-semibold">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="85"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">React / Vue.js</span>
+                <span class="text-[var(--accent)] font-semibold">80%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">Figma / Adobe XD</span>
+                <span class="text-[var(--accent)] font-semibold">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">Database Management</span>
+                <span class="text-[var(--accent)] font-semibold">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="75"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-10 flex flex-wrap gap-3">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue.js</span>
+            <span class="skill-tag">TailwindCSS</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="reveal reveal-delay-2">
+          <h3 class="font-display text-2xl font-semibold mb-8 flex items-center gap-3">
+            <span class="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--deep-soft)] to-[var(--deep)] flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0.5">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </span>
+            Soft Skills
+          </h3>
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">Communication</span>
+                <span class="text-[var(--deep)] font-semibold">92%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="92" style="background: linear-gradient(90deg, #a84d76, #8b2e5a);"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">Problem Solving</span>
+                <span class="text-[var(--deep)] font-semibold">88%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="88" style="background: linear-gradient(90deg, #a84d76, #8b2e5a);"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">Team Collaboration</span>
+                <span class="text-[var(--deep)] font-semibold">95%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="95" style="background: linear-gradient(90deg, #a84d76, #8b2e5a);"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">Time Management</span>
+                <span class="text-[var(--deep)] font-semibold">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="85" style="background: linear-gradient(90deg, #a84d76, #8b2e5a);"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-[var(--fg)]">Adaptability</span>
+                <span class="text-[var(--deep)] font-semibold">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" data-width="90" style="background: linear-gradient(90deg, #a84d76, #8b2e5a);"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-10 flex flex-wrap gap-3">
+            <span class="skill-tag">Willing to Learn</span>
+            <span class="skill-tag">Adaptable</span>
+            <span class="skill-tag">Team Player</span>
+            <span class="skill-tag">Detail-Oriented</span>
+            <span class="skill-tag">Creative</span>
+            <span class="skill-tag">Critical Thinking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="relative py-24 lg:py-32 bg-gradient-to-br from-[var(--deep)] via-[var(--deep-soft)] to-[var(--deep)]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="reveal flex items-center justify-center gap-2 mb-4">
+          <span class="text-[var(--accent-light)]">♥</span>
+          <p class="text-[var(--accent-light)] font-semibold tracking-widest text-sm uppercase">Portfolio</p>
+        </div>
+        <h2 class="reveal reveal-delay-1 font-display text-4xl lg:text-5xl font-normal text-white">
+          Featured <span class="font-bold text-[var(--accent-light)]">Projects</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="reveal project-card card bg-white/5 backdrop-blur-sm border-white/10 overflow-hidden">
+          <div class="aspect-[4/3] bg-gradient-to-br from-[var(--accent)]/30 to-[var(--accent-dark)]/30 flex items-center justify-center relative">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="21" x2="9" y2="9"></line>
+            </svg>
+            <div class="absolute top-4 right-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent-light)" stroke="none">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-xs text-[var(--accent-light)] uppercase tracking-wider font-semibold">Web Application</span>
+            <h3 class="font-display text-xl font-semibold text-white mt-2 mb-3">E-Commerce Platform</h3>
+            <p class="text-white/60 text-sm leading-relaxed">Full-stack e-commerce solution with user authentication, product management, and payment integration.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">React</span>
+              <span class="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">Node.js</span>
+              <span class="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">MongoDB</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="#" class="text-white font-semibold flex items-center gap-2 hover:text-[var(--accent-light)] transition-colors">
+              <span>♥</span> View Project
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="reveal reveal-delay-1 project-card card bg-white/5 backdrop-blur-sm border-white/10 overflow-hidden">
+          <div class="aspect-[4/3] bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center relative">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" opacity="0.7">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <div class="absolute top-4 right-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent-light)" stroke="none">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-xs text-[var(--accent-light)] uppercase tracking-wider font-semibold">UI/UX Design</span>
+            <h3 class="font-display text-xl font-semibold text-white mt-2 mb-3">Travel Booking App</h3>
+            <p class="text-white/60 text-sm leading-relaxed">Complete UI/UX redesign for a travel booking platform, improving user flow and conversion rates.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">Figma</span>
+              <span class="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">Prototyping</span>
+              <span class="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">Research</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="#" class="text-white font-semibold flex items-center gap-2 hover:text-[var(--accent-light)] transition-colors">
+              <span>♥</span> View Project
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="reveal reveal-delay-2 project-card card bg-white/5 backdrop-blur-sm border-white/10 overflow-hidden">
+          <div class="aspect-[4/3] bg-gradient-to-br from-[var(--accent-dark)]/40 to-[var(--deep)] flex items-center justify-center relative">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+            <div class="absolute top-4 right-4">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent-light)" stroke="none">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+          </div>
+          <div class="p-6">
+            <span class="text-xs text-[var(--accent-light)] uppercase tracking-wider font-semibold">Python Development</span>
+            <h3 class="font-display text-xl font-semibold text-white mt-2 mb-3">Data Analytics Dashboard</h3>
+            <p class="text-white/60 text-sm leading-relaxed">Interactive dashboard for visualizing business metrics with real-time data processing capabilities.</p>
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">Python</span>
+              <span class="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">Pandas</span>
+              <span class="px-3 py-1 bg-white/10 text-white/80 text-xs rounded-full">D3.js</span>
+            </div>
+          </div>
+          <div class="project-overlay">
+            <a href="#" class="text-white font-semibold flex items-center gap-2 hover:text-[var(--accent-light)] transition-colors">
+              <span>♥</span> View Project
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="relative py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <div class="reveal flex items-center justify-center gap-2 mb-4">
+          <span class="text-[var(--accent)]">♥</span>
+          <p class="text-[var(--accent)] font-semibold tracking-widest text-sm uppercase">Achievements</p>
+        </div>
+        <h2 class="reveal reveal-delay-1 font-display text-4xl lg:text-5xl font-normal">
+          Certificates & <span class="font-bold text-[var(--accent)]">Awards</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Certificate 1 -->
+        <div class="reveal cert-badge">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] flex items-center justify-center flex-shrink-0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-[var(--fg)] mb-1">UI/UX Design Professional</h4>
+            <p class="text-sm text-[var(--fg-muted)]">Google - 2023</p>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div class="reveal reveal-delay-1 cert-badge">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--deep-soft)] to-[var(--deep)] flex items-center justify-center flex-shrink-0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0.5">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-[var(--fg)] mb-1">Python for Data Science</h4>
+            <p class="text-sm text-[var(--fg-muted)]">IBM - 2023</p>
+          </div>
+        </div>
+
+        <!-- Certificate 3 -->
+        <div class="reveal reveal-delay-2 cert-badge">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] flex items-center justify-center flex-shrink-0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-[var(--fg)] mb-1">Front-End Web Development</h4>
+            <p class="text-sm text-[var(--fg-muted)]">Meta - 2022</p>
+          </div>
+        </div>
+
+        <!-- Certificate 4 -->
+        <div class="reveal reveal-delay-3 cert-badge">
+          <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--deep-soft)] to-[var(--deep)] flex items-center justify-center flex-shrink-0">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="0.5">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-semibold text-[var(--fg)] mb-1">Responsive Web Design</h4>
+            <p class="text-sm text-[var(--fg-muted)]">freeCodeCamp - 2022</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="relative py-24 lg:py-32 bg-[var(--bg-alt)]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <!-- Contact Info -->
+        <div>
+          <div class="reveal flex items-center gap-2 mb-4">
+            <span class="text-[var(--accent)]">♥</span>
+            <p class="text-[var(--accent)] font-semibold tracking-widest text-sm uppercase">Get in Touch</p>
+          </div>
+          <h2 class="reveal reveal-delay-1 font-display text-4xl lg:text-5xl font-normal mb-6">
+            Let's Work<br><span class="font-bold text-[var(--accent)]">Together</span>
+          </h2>
+          <p class="reveal reveal-delay-2 text-[var(--fg-muted)] text-lg mb-10 max-w-md">
+            I'd love to hear about your project! Let's create something beautiful together with passion and dedication.
+          </p>
+
+          <div class="reveal reveal-delay-3 space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-[var(--card)] shadow-lg flex items-center justify-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="var(--accent)" stroke="var(--accent)" stroke-width="0.5">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-[var(--fg-muted)]">Email</p>
+                <a href="mailto:sherlyn.jabian@email.com" class="font-semibold text-[var(--fg)] hover:text-[var(--accent)] transition-colors">sherlyn.jabian@email.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-[var(--card)] shadow-lg flex items-center justify-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-[var(--fg-muted)]">Phone</p>
+                <a href="tel:+639123456789" class="font-semibold text-[var(--fg)] hover:text-[var(--accent)] transition-colors">+63 912 345 6789</a>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 rounded-2xl bg-[var(--card)] shadow-lg flex items-center justify-center">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm text-[var(--fg-muted)]">Location</p>
+                <p class="font-semibold text-[var(--fg)]">Philippines</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="reveal reveal-delay-4 mt-10">
+            <p class="text-sm text-[var(--fg-muted)] mb-4 font-medium">Connect with me</p>
+            <div class="flex gap-4">
+              <a href="#" class="social-link" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Dribbble">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Behance">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M1 7h6.5a3.5 3.5 0 0 1 0 7H1z"></path>
+                  <path d="M1 14h7a4 4 0 0 1 0 8H1z"></path>
+                  <path d="M15 7h6"></path>
+                  <path d="M15 19a4 4 0 0 0 4-4c0-4-4-4-4-4s-4 0-4 4a4 4 0 0 0 4 4z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="reveal">
+          <form id="contactForm" class="card">
+            <div class="space-y-6">
+              <div class="grid sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="name" class="block text-sm font-semibold mb-2 text-[var(--fg)]">Name</label>
+                  <input type="text" id="name" name="name" class="input-field" placeholder="Your name" required>
+                </div>
+                <div>
+                  <label for="email" class="block text-sm font-semibold mb-2 text-[var(--fg)]">Email</label>
+                  <input type="email" id="email" name="email" class="input-field" placeholder="your@email.com" required>
+                </div>
+              </div>
+              <div>
+                <label for="subject" class="block text-sm font-semibold mb-2 text-[var(--fg)]">Subject</label>
+                <input type="text" id="subject" name="subject" class="input-field" placeholder="Project inquiry">
+              </div>
+              <div>
+                <label for="message" class="block text-sm font-semibold mb-2 text-[var(--fg)]">Message</label>
+                <textarea id="message" name="message" rows="5" class="input-field resize-none" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <button type="submit" class="btn-primary w-full justify-center">
+                <span>♥</span>
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 bg-[var(--deep)]">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <p class="text-sm text-white/60">
+          2024 Sherlyn Jabian. Made with 
+          <svg class="inline-block w-4 h-4 text-[var(--accent-light)]" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </p>
+        <a href="#" class="font-display text-2xl font-semibold text-white flex items-center gap-1">
+          <span class="text-[var(--accent-light)]">♥</span>
+          Sherlyn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
